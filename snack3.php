@@ -6,8 +6,8 @@ Stampare ogni data con i relativi post. -->
 $posts = [
     "30-05-2021" => [
         'Ciao a tutti quuesto è il mio primo tweet',
-        'a gemini will like your Tweet and then block you',
-        'may the odds be in your favor',
+        'Secondo tweet',
+        'Terzo Tweet',
         'Justice is a long road, and we can’t bring back George Floyd. May we each use this moment to continue to deepen our solidarity and our commitment to combating racial injustice, and may his family find peace.'
     ],
     "31-05-2021" => [
