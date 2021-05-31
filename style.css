@@ -3,6 +3,10 @@
     margin: 0;
     box-sizing: border-box;
 }
+:root{
+    --first-color:#e9b72d;
+    --second-color: #1a3142;
+}
 html{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -25,7 +29,7 @@ header{
     left: 0;
     right: 0;
     position: fixed;
-    background-color: rgb(233, 183, 45);
+    background-color: var(--first-color);
     color: #1a3142;
     padding: 5px;
     display: flex;
@@ -43,6 +47,7 @@ ul{
 }
 .results{
     float: right;
+    color: var(--first-color);
 }
 .container{
     position: absolute;
@@ -51,7 +56,7 @@ ul{
     transform: translate(-50%,-50%);
     width: 80%;
     margin: auto;
-    background-color: #1a3142;
+    background-color: var(--second-color);
     border-radius: 25px;
     color: white;
     padding: 25px;
