@@ -56,28 +56,37 @@ $giornata = [
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Calendario LBA</title>
 </head>
 
 <body>
-    <h1>Partite 31/05/2021</h1>
-    <ul>
-        <?php
-        for ($i = 0; $i < count($giornata); $i++) {
-        ?>
-        <li>
-        <strong>
-                <?php echo $giornata[$i]["homeTeam"] . " - " . $giornata[$i]["opposingTeam"] ?>
-            </strong>
-            <span> | </span>
-            <span>
-                <?php echo $giornata[$i]["homeTeamPoint"] . " - " . $giornata[$i]["opposingTeamPoint"] ?>
-            </span>
-        </li>
-        <?php
-        }
-        ?>
-    </ul>
+    <header>
+            <img class="logo" src="logo.png" alt="">
+            <h1> LBA </h1>
+    </header>
+    <div class="background">
+    </div>
+    <div class="container">
+        <div>Ultima giornata:</div>
+        <ul>
+            <?php
+            for ($i = 0; $i < count($giornata); $i++) {
+            ?>
+                <li>
+                    <strong>
+                        <?php echo $giornata[$i]["homeTeam"] . " - " . $giornata[$i]["opposingTeam"] ?>
+                    </strong>
+                    <span class="results">
+                        <?php echo $giornata[$i]["homeTeamPoint"] . " - " . $giornata[$i]["opposingTeamPoint"] ?>
+                    </span>
+                </li>
+            <?php
+            }
+            ?>
+        </ul>
+    </div>
 </body>
 
 </html>
