@@ -6,46 +6,95 @@ Olimpia Milano - Cantù | 55-60 -->
 <?php
 $giornata = [
     [
-        "homeTeam" => "Olimpia Milano",
-        "opposingTeam" => "Cantù",
+        "homeTeam" => [
+            "name" => "Olimpia Milano",
+            "logoTeam" => 'olimpia.png'
+        ],
+        "opposingTeam" => [
+            "name" => "Cantù",
+            "logoTeam" => 'cantu.png',
+        ],
         "homeTeamPoint" => rand(10, 80),
         "opposingTeamPoint" => rand(10, 80),
+
     ],
     [
-        "homeTeam" => "Brindisi",
-        "opposingTeam" => "Virtus Bologna",
+        "homeTeam" => [
+            "name" => "Brindisi",
+            "logoTeam" => 'brindisi.png'
+        ],
+        "opposingTeam" => [
+            "name" => "Virtus Bologna",
+            "logoTeam" => 'virtus.png'
+        ],
         "homeTeamPoint" => rand(10, 80),
         "opposingTeamPoint" => rand(10, 80),
+
     ],
     [
-        "homeTeam" => "Venezia",
-        "opposingTeam" => "Dinamo Sassari",
+        "homeTeam" => [
+            "name" => "Venezia",
+            "logoTeam" => 'venezia.png'
+        ],
+        "opposingTeam" => [
+            "name" => "Dinamo Sassari",
+            "logoTeam" => 'dinamo.png'
+        ],
         "homeTeamPoint" => rand(10, 80),
         "opposingTeamPoint" => rand(10, 80),
+
     ],
     [
-        "homeTeam" => "Universo Treviso",
-        "opposingTeam" => "Trento",
+        "homeTeam" => [
+            "name" => "Universo Treviso",
+            "logoTeam" => 'treviso.png'
+        ],
+        "opposingTeam" => [
+            "name" =>  "Trento",
+            "logoTeam" => 'trento.png'
+        ],
         "homeTeamPoint" => rand(10, 80),
         "opposingTeamPoint" => rand(10, 80),
+
     ],
     [
-        "homeTeam" => "Trieste",
-        "opposingTeam" => "Brescia",
+        "homeTeam" => [
+            "name" => "Trieste",
+            "logoTeam" => 'trieste.png'
+        ],
+        "opposingTeam" => [
+            "name" => "Brescia",
+            "logoTeam" => 'brescia.png'
+        ],
         "homeTeamPoint" => rand(10, 80),
         "opposingTeamPoint" => rand(10, 80),
+
     ],
     [
-        "homeTeam" => "Cremona",
-        "opposingTeam" => "Reggiana",
+        "homeTeam" => [
+            "name" => "Cremona",
+            "logoTeam" => 'cremona.png'
+        ],
+        "opposingTeam" => [
+            "name" => "Reggiana",
+            "logoTeam" => 'reggiana.png'
+        ],
         "homeTeamPoint" => rand(10, 80),
         "opposingTeamPoint" => rand(10, 80),
+
     ],
     [
-        "homeTeam" => "Fortitudo Bologna",
-        "opposingTeam" => "VL Pesaro",
+        "homeTeam" => [
+            "name" => "Fortitudo Bologna",
+            "logoTeam" => 'fortitudo.png'
+        ],
+        "opposingTeam" => [
+            "name" => "VL Pesaro",
+            "logoTeam" => 'pesaro.png'
+        ],
         "homeTeamPoint" => rand(10, 80),
         "opposingTeamPoint" => rand(10, 80),
+
     ],
 ];
 ?>
@@ -63,8 +112,8 @@ $giornata = [
 
 <body>
     <header>
-            <img class="logo" src="logo.png" alt="">
-            <h1> LBA </h1>
+        <img class="logo" src="logo.png" alt="">
+        <h1> LBA </h1>
     </header>
     <div class="background">
     </div>
@@ -76,7 +125,16 @@ $giornata = [
             ?>
                 <li>
                     <strong>
-                        <?php echo $giornata[$i]["homeTeam"] . " - " . $giornata[$i]["opposingTeam"] ?>
+                        <span class="team">
+                            <span class="team-logo"> <img src="<?php echo "imgs/" . $giornata[$i]["homeTeam"]["logoTeam"]  ?>" alt=""> </span>
+                            <?php echo $giornata[$i]["homeTeam"]["name"] ?>
+                        </span>
+                        -
+                        <span class="team">
+                            <span class="team-logo"> <img src="<?php echo "imgs/" . $giornata[$i]["opposingTeam"]["logoTeam"]  ?>" alt=""> </span>
+                            <?php echo $giornata[$i]["opposingTeam"]["name"] ?>
+                        </span>
+
                     </strong>
                     <span class="results">
                         <?php echo $giornata[$i]["homeTeamPoint"] . " - " . $giornata[$i]["opposingTeamPoint"] ?>

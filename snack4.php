@@ -5,7 +5,7 @@ lo stesso numero più di una volta -->
 $arrayRandom = [];
 $i = 0;
 while (count($arrayRandom) < 15) {
-    $numRand = rand(0, 100);
+    $numRand = rand(0, 15);
     if (!in_array($numRand, $arrayRandom)) {
         $arrayRandom[] = $numRand;
         $i++;
